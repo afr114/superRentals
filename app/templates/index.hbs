@@ -3,11 +3,14 @@
 
   We hope you find what you're looking for.<br><br>
 
+
 <ul style="list-style: none;">
-  {{#each model as |rental-unit|}}
-    {{rental-canvas rental=rental-unit}}
+  {{#each model as |rental|}}
+    {{rental-canvas rental=rental destroyRental="destroyRental"}}
   {{/each}}
 </ul>
+
+{{new-rental save2="save2"}}
 
 <br>
   {{#link-to 'about'}}About{{/link-to}}
