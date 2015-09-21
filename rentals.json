@@ -22,5 +22,8 @@
     "type": "Sublet",
     "bedrooms": 1,
     "image": "no image"
-  }]
+  }],
+  "cities": [{
+    "city": "pdx"
+    }]
 }
