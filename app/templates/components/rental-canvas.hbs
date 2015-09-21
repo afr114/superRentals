@@ -1,0 +1,14 @@
+<div class="row">
+  <li>
+    <div class="col-md-4">
+      {{rental.owner}}'s {{rental.type}} in {{rental.city}}
+    </div>
+      {{#if isImageShowing}}
+        <p><img src={{rental.image}} alt={{rental.type}} {{action 'imageHide'}}></p>
+    {{else}}
+    <div class="col-md-4">
+      <button style="border-width: thick;"class="btn-sm btn-success" {{action 'imageShow'}}>Image</button>
+    </div>
+      {{/if}}
+  </li>
+</div>

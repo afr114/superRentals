@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Welcome to Super Rentals!</h1>
+
+  We hope you find what you're looking for.<br><br>
+
+<ul style="list-style: none;">
+  {{#each model as |rental-unit|}}
+    {{rental-canvas rental=rental-unit}}
+  {{/each}}
+</ul>
+
+<br>
+  {{#link-to 'about'}}About{{/link-to}}
+  {{#link-to 'contact'}}Contact Us{{/link-to}}
+</div>
