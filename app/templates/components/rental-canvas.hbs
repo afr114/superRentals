@@ -1,7 +1,7 @@
 <div class="row">
   <li>
     <div class="col-md-4">
-      {{rental.owner}}'s {{rental.type}} in {{rental.city}}
+      {{#link-to 'rental' rental.id}}{{rental.owner}}'s {{rental.type}} in {{rental.city}}{{/link-to}}
     </div>
       {{#if isImageShowing}}
     <p><img src={{rental.image}} alt={{rental.type}} {{action 'imageHide'}}></p>
