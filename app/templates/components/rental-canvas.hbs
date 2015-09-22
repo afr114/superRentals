@@ -1,19 +1,16 @@
-<div class="row">
+<!-- <div class="row"> -->
   <li>
-    <div class="col-md-4">
+    <!-- <div class="col-md-6"> -->
       {{#link-to 'rental' rental.id}}{{rental.owner}}'s {{rental.type}} in {{rental.city}}{{/link-to}}
-    </div>
+    <!-- </div> -->
       {{#if isImageShowing}}
-    <p><img src={{rental.image}} alt={{rental.type}} {{action 'imageHide'}}></p>
+        <p><img src={{rental.image}} alt={{rental.type}} {{action 'imageHide'}}></p>
       {{else}}
-    <div class="col-md-1">
+    <!-- <div class="col-md-6"> -->
       <button style="border-width: thick;"class="btn-sm btn-success" {{action 'imageShow'}}>Image</button>
-    </div>
-    {{/if}}
-
-    <div class="col-md-2">
-      <button style="border-width: thick;" class="btn-sm btn-danger" {{action 'delete' rental}}>Delete</button>
-    </div>
-  </li>
-
-</div>
+    <!-- </div> -->
+      {{/if}}
+        {{update-rental rental=rental saveChanges="saveChanges"}}
+      <button {{action 'delete' rental}}>Delete</button>
+    </li>
+  <!-- </div> -->

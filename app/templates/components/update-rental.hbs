@@ -1,0 +1,37 @@
+{{#if isUpdateFormShowing}}
+<h1>Update Rental Information</h1>
+  <div>
+    <form>
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <label for="owner">Owner</label>
+            {{input class="form-control" value=owner id="owner" placeholder=rental.owner}}
+          </div>
+
+          <div class="form-group">
+            <label for="type">Type</label>
+            {{input class="form-control" value=type id="type" placeholder=rental.type}}
+          </div>
+
+          <div class="form-group">
+            <label for="city">City</label>
+            {{input class="form-control" value=city id="city" placeholder=rental.city}}
+          </div>
+
+          <div class="form-group">
+            <label for="bedrooms">Number of Bedrooms</label>
+            {{input class="form-control" value=bedrooms id="bedrooms" placeholder=rental.bedrooms}}
+          </div>
+          <div class="form-group">
+            <label for="image">Image URL</label>
+            {{input class="form-control" value=image id="image" placeholder=rental.image}}
+          </div>
+        </div>
+      </div>
+      <button style="border-width: thick; background-color:gray; color:white;" {{action 'saveChanges' rental}}>Save</button>
+    </form>
+  </div>
+  {{else}}
+  <button style="border-width: thick;"class="btn-sm btn-success" {{action 'showUpdateForm'}}>Update</button>
+{{/if}}

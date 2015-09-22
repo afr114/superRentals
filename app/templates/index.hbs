@@ -1,12 +1,12 @@
 
-  <h1 class="text-center">Welcome to Super Rentals!</h1> <br>
-
-  We hope you find what you're looking for.<br><br>
+  <h1 class="text-center">Welcome to Super Rentals!</h1><br>
+  <small> We hope you find what you're looking for.</small>
+<br><br>
 
 
 <ul style="list-style: none;">
   {{#each model as |rental|}}
-    {{rental-canvas rental=rental destroyRental="destroyRental"}}
+    {{rental-canvas rental=rental saveChanges="saveChanges" destroyRental="destroyRental"}}
   {{/each}}
 </ul>
 <br>
