@@ -6,6 +6,10 @@
   By building a property rental site, we can imagine traveling and creating.
 </p>
 
+{{#each model as |rental|}}
+{{rental.owner}}
+{{/each}}
+
 {{#link-to 'contact'}}Click here to Contact Us!{{/link-to}}<br><br>
 {{#link-to 'index'}}Home{{/link-to}}
 
